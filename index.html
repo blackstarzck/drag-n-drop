@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드래그 & 드롭</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        width: 700px;
+        height: auto;
+        padding: 10px;
+        border: 1px solid black;
+        /* position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+
+        /* top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto; */
+    }
+
+    li {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border: 1px solid black;
+        background-color: #dddddd;
+        list-style: none;
+        font-weight: bold;
+        margin: 0 auto;
+        
+        -ms-user-select: none; 
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    
+    <ul class="wrapper">
+        <li class="item">ITEM-01</li>
+        <li class="item">ITEM-02</li>
+        <li class="item">ITEM-03</li>
+        <li class="item">ITEM-04</li>
+        <li class="item">ITEM-05</li>
+        <li class="item">ITEM-06</li>
+        <li class="item">ITEM-07</li>
+    </ul>
+
+    <script type="text/javascript" src="./dragNdrop.js"></script>
+    <script>
+        let draggable = new Draggable(".wrapper");
+
+
+    </script>
+</body>
+</html>
